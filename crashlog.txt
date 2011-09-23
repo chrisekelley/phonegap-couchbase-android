@@ -1,0 +1,64 @@
+09-23 17:18:26.451 I/DEBUG   (   31): *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+09-23 17:18:26.451 I/DEBUG   (   31): Build fingerprint: 'generic/sdk/generic:2.3.3/GRI34/101070:eng/test-keys'
+09-23 17:18:26.451 I/DEBUG   (   31): pid: 896, tid: 896  >>> /data/data/com.phonegap.PhonegapCouchbaseAndroid/couchdb/lib/couchdb/bin/couchjs <<<
+09-23 17:18:26.451 I/DEBUG   (   31): signal 4 (SIGILL), code 1 (ILL_ILLOPC), fault addr 8005f6e6
+09-23 17:18:26.451 I/DEBUG   (   31):  r0 00000049  r1 00000017  r2 00000ff8  r3 80296788
+09-23 17:18:26.451 I/DEBUG   (   31):  r4 80281cc4  r5 00000017  r6 00000004  r7 00000000
+09-23 17:18:26.451 I/DEBUG   (   31):  r8 00000000  r9 00000000  10 00000000  fp 00000000
+09-23 17:18:26.451 I/DEBUG   (   31):  ip 80000000  sp be95c7f8  lr b00037f5  pc 8005f6e6  cpsr 80000030
+09-23 17:18:26.471 I/DEBUG   (   31):          #00  pc 0005f6e6  /data/data/com.phonegap.PhonegapCouchbaseAndroid/couchdb/bin/libmozjs.so
+09-23 17:18:26.471 I/DEBUG   (   31):          #01  lr b00037f5  /system/bin/linker
+09-23 17:18:26.471 I/DEBUG   (   31): 
+09-23 17:18:26.471 I/DEBUG   (   31): code around pc:
+09-23 17:18:26.471 I/DEBUG   (   31): 8005f6c4 3301d0e0 d3f342a3 e7dc2001 00236118 
+09-23 17:18:26.471 I/DEBUG   (   31): 8005f6d4 00000ff8 bf004b13 2049a200 4a12189b 
+09-23 17:18:26.471 I/DEBUG   (   31): 8005f6e4 f240189b f8d32249 f362112c f8c3011a 
+09-23 17:18:26.471 I/DEBUG   (   31): 8005f6f4 f8d3112c f3621138 f8c3011a f8d31138 
+09-23 17:18:26.471 I/DEBUG   (   31): 8005f704 f3601144 f8c3011a f8d31144 f3621150 
+09-23 17:18:26.471 I/DEBUG   (   31): 
+09-23 17:18:26.471 I/DEBUG   (   31): code around lr:
+09-23 17:18:26.471 I/DEBUG   (   31): b00037d4 2a002601 1e48d003 18e40083 00b64276 
+09-23 17:18:26.481 I/DEBUG   (   31): b00037e4 e0061c0d 19a46823 32031e5a 4798d800 
+09-23 17:18:26.481 I/DEBUG   (   31): b00037f4 2d003d01 bd70dcf6 1c03b510 1c0433e8 
+09-23 17:18:26.481 I/DEBUG   (   31): b0003804 28006818 3304d004 22016819 ffdef7ff 
+09-23 17:18:26.481 I/DEBUG   (   31): b0003814 682334f4 d0002b00 bd104798 4c05b510 
+09-23 17:18:26.481 I/DEBUG   (   31): 
+09-23 17:18:26.481 I/DEBUG   (   31): stack:
+09-23 17:18:26.481 I/DEBUG   (   31):     be95c7b8  b0009da4  /system/bin/linker
+09-23 17:18:26.481 I/DEBUG   (   31):     be95c7bc  b0003c51  /system/bin/linker
+09-23 17:18:26.481 I/DEBUG   (   31):     be95c7c0  ffffffff  
+09-23 17:18:26.481 I/DEBUG   (   31):     be95c7c4  00000000  
+09-23 17:18:26.481 I/DEBUG   (   31):     be95c7c8  b0009d18  /system/bin/linker
+09-23 17:18:26.481 I/DEBUG   (   31):     be95c7cc  b00105bc  
+09-23 17:18:26.491 I/DEBUG   (   31):     be95c7d0  b0009d18  /system/bin/linker
+09-23 17:18:26.491 I/DEBUG   (   31):     be95c7d4  b00047b5  /system/bin/linker
+09-23 17:18:26.491 I/DEBUG   (   31):     be95c7d8  ffffffff  
+09-23 17:18:26.491 I/DEBUG   (   31):     be95c7dc  b0009d18  /system/bin/linker
+09-23 17:18:26.491 I/DEBUG   (   31):     be95c7e0  00000ec8  
+09-23 17:18:26.491 I/DEBUG   (   31):     be95c7e4  00003164  
+09-23 17:18:26.491 I/DEBUG   (   31):     be95c7e8  8003929c  /data/data/com.phonegap.PhonegapCouchbaseAndroid/couchdb/bin/libmozjs.so
+09-23 17:18:26.491 I/DEBUG   (   31):     be95c7ec  800198fa  /data/data/com.phonegap.PhonegapCouchbaseAndroid/couchdb/bin/libmozjs.so
+09-23 17:18:26.491 I/DEBUG   (   31):     be95c7f0  df002777  
+09-23 17:18:26.501 I/DEBUG   (   31):     be95c7f4  e3a070ad  
+09-23 17:18:26.501 I/DEBUG   (   31): #00 be95c7f8  b0009dfc  /system/bin/linker
+09-23 17:18:26.501 I/DEBUG   (   31):     be95c7fc  b0009df8  /system/bin/linker
+09-23 17:18:26.501 I/DEBUG   (   31):     be95c800  00002732  
+09-23 17:18:26.501 I/DEBUG   (   31):     be95c804  b00038a7  /system/bin/linker
+09-23 17:18:26.501 I/DEBUG   (   31):     be95c808  0029f000  
+09-23 17:18:26.501 I/DEBUG   (   31):     be95c80c  afb00000  /system/lib/libm.so
+09-23 17:18:26.501 I/DEBUG   (   31):     be95c810  00000003  
+09-23 17:18:26.501 I/DEBUG   (   31):     be95c814  b0009d18  /system/bin/linker
+09-23 17:18:26.501 I/DEBUG   (   31):     be95c818  80295768  /data/data/com.phonegap.PhonegapCouchbaseAndroid/couchdb/bin/libmozjs.so
+09-23 17:18:26.501 I/DEBUG   (   31):     be95c81c  b0009d18  /system/bin/linker
+09-23 17:18:26.501 I/DEBUG   (   31):     be95c820  00002732  
+09-23 17:18:26.501 I/DEBUG   (   31):     be95c824  b0004f9f  /system/bin/linker
+09-23 17:18:26.501 I/DEBUG   (   31):     be95c828  00000003  
+09-23 17:18:26.511 I/DEBUG   (   31):     be95c82c  b0009da4  /system/bin/linker
+09-23 17:18:26.511 I/DEBUG   (   31):     be95c830  b0009d18  /system/bin/linker
+09-23 17:18:26.511 I/DEBUG   (   31):     be95c834  00000005  
+09-23 17:18:26.511 I/DEBUG   (   31):     be95c838  00000000  
+09-23 17:18:26.511 I/DEBUG   (   31):     be95c83c  00000000  
+09-23 17:18:26.532 V/Couchbase(  338): [error] [<0.364.0>] OS Process Error <0.366.0> :: {os_process_error,
+09-23 17:18:26.532 V/Couchbase(  338):                                                    {exit_status,132}}
+09-23 17:18:26.601 V/Couchbase(  338): [debug] [<0.370.0>] OS Process Start :: #Port<0.1526>
+09-23 17:18:26.611 V/Couchbase(  338): [debug] [<0.370.0>] OS Process #Port<0.1526> Input  :: ["reset",{"reduce_limit":true,"timeout":30000}]

@@ -66,18 +66,22 @@ public class PhonegapCouchbaseAndroid extends DroidGap
 
   					PasswordAuthentication credential = new PasswordAuthentication("admin", "admin".toCharArray());
   					credential = null; // NO USER/PASSWORD ON ANDROID
-            CouchMover couchMover = new CouchMover(serverURL, credential, "mycouchapp_db");
+  		            //CouchMover couchMover = new CouchMover(serverURL, credential, "mycouchapp_db");
+  					CouchMover couchMover = new CouchMover(serverURL, credential, "odk");
 				    
   			    // load the coachapp if needed from a bundle (you can create non-bundle loading options through loadDocument)
-  			    couchMover.loadDocumentFromAssetManager(getAssets(), "_design/mycouchapp", "mycouchapp.json", "mycouchapp.version");
+  	  			    //couchMover.loadDocumentFromAssetManager(getAssets(), "_design/mycouchapp", "mycouchapp.json", "mycouchapp.version");
+  	  			    couchMover.loadDocumentFromAssetManager(getAssets(), "_design/render", "odk.json", "odk.version");
+  	  			    couchMover.loadDocumentFromAssetManager(getAssets(), "ArrestDocket", "ad.json", "ad.version");
+  	  			    couchMover.loadDocumentFromAssetManager(getAssets(), "PatientRegistration", "pr.json", "pr.version");
 			        
   			    // load the data if needed from a bundle (you can create non-bundle loading options through loadDocument)
-  			    couchMover.loadDocumentFromAssetManager(getAssets(), "mydata", "mydata.json", "mydata.version");
+  			    //couchMover.loadDocumentFromAssetManager(getAssets(), "mydata", "mydata.json", "mydata.version");
 
   			    // load the data views if needed from a bundle (you can create non-bundle loading options through loadDocument)
-  			    couchMover.loadDocumentFromAssetManager(getAssets(), "_design/mydata_views", "mydata_views.json", "mydata_views.version");
-
-  					couchMover.gotoAppPage("_design/mycouchapp", appView, "index.html");
+  			    //couchMover.loadDocumentFromAssetManager(getAssets(), "_design/mydata_views", "mydata_views.json", "mydata_views.version");
+					//couchMover.gotoAppPage("_design/mycouchapp", appView, "index.html");
+  					couchMover.gotoAppPage("_design/render", appView, "index.html");
   				} 
 				
 		   		@Override

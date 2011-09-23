@@ -1,5 +1,7 @@
 package com.couchbaseextensions;
 
+import java.io.IOException;
+
 import com.couchbase.android.CouchbaseMobile;
 import com.couchbase.android.ICouchbaseDelegate;
 
@@ -108,6 +110,13 @@ public class CouchStarter
    //couchServiceConnection = CouchDB.getService(owningActivity, null, release, callback);
    //CouchbaseMobile couch = new CouchbaseMobile(getBaseContext(), callback);
    CouchbaseMobile couch = new CouchbaseMobile(owningActivity, callback);
+   
+	try {
+		couch.copyIniFile("couch.ini");
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
    couchServiceConnection = couch.startCouchbase();
 
   }
