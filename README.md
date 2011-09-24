@@ -13,15 +13,15 @@ This test app uses CouchDB and PhoneGap. The couchapp is using backbone.js for M
 
 Here is my current process. Run couchpack on the docs you want to include:
  
-couchpack document http://localhost:5984/odk/_design/render odk
-couchpack document http://localhost:5984/odk/ArrestDocket ad
-couchpack document http://localhost:5984/odk/PatientRegistration pr
+    couchpack document http://localhost:5984/odk/_design/render odk
+    couchpack document http://localhost:5984/odk/ArrestDocket ad
+    couchpack document http://localhost:5984/odk/PatientRegistration pr
  
 It strips the id's and revs, and also creates a version id that can be used for version tracking. 
-Kevin Malakoff's system creates a “shadow” document that has this version, I think, that is used for tracking freshness.
+Kevin Malakoff's system creates a "shadow" document that has this version, I think, that is used for tracking freshness.
  
 I would like a way to slurp the whole db into a single document. 
-I tried couchapp push –export, but it did not quite have all of the magic sauce. 
+I tried couchapp push -export, but it did not quite have all of the magic sauce. 
 But I may revisit that when I have a chance. 
 But the good thing about the current manual method is that it does ensure a clean database.
  
@@ -35,11 +35,8 @@ https://github.com/vetula/phonegap-couchbase-android/blob/master/src/com/phonega
 
 ## Additions
 
-I added some code from Mobile Futon to set the app port to 5985 to make debugging a little easier. 
-The URL this generates are strange: http://0.0.0.0:5985/odk/... Never seen that before! 
-But it works fine, and I can even access it using the tablet's browser.
-
-Also added Mobile Futon to the app to view the CouchDB and also facilitate viewing the app as a CouchApp in Chrome.
+* I added some code from Mobile Futon to set the app port to 5985 to make debugging a little easier. 
+* Also added Mobile Futon to the app to view the CouchDB and also facilitate viewing the app as a CouchApp in Chrome.
 
 ## Next Steps
 Next step is to code the app to look in assets/loadme directory and loop through the files. 
