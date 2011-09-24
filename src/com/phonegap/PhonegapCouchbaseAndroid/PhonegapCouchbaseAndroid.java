@@ -18,6 +18,7 @@ public class PhonegapCouchbaseAndroid extends DroidGap
    	protected static final String LOG_TAG = "PhonegapCouchbaseAndroid";
 
    	private CouchStarter couchStarter;
+   	private Boolean couchStarted = false;
 
 	@Override
     public void onCreate(Bundle savedInstanceState)
@@ -52,6 +53,14 @@ public class PhonegapCouchbaseAndroid extends DroidGap
 		{
 		}
 	}
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		if (!couchStarted) {
+			startCouch();
+		}
+	}
 
 	private void startCouch() 
 	{
@@ -82,6 +91,7 @@ public class PhonegapCouchbaseAndroid extends DroidGap
   			    //couchMover.loadDocumentFromAssetManager(getAssets(), "_design/mydata_views", "mydata_views.json", "mydata_views.version");
 					//couchMover.gotoAppPage("_design/mycouchapp", appView, "index.html");
   					couchMover.gotoAppPage("_design/render", appView, "index.html");
+  					couchStarted = true;
   				} 
 				
 		   		@Override
