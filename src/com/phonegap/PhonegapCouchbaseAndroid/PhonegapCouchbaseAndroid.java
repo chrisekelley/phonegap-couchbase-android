@@ -46,8 +46,12 @@ public class PhonegapCouchbaseAndroid extends DroidGap
 		super.onDestroy();
 		try 
 		{
-			if(couchStarter!=null)
+			if(couchStarter!=null) {
+				Log.v(LOG_TAG, "Stopping CouchDb");
 				couchStarter.stopCouch();
+			} else {
+				Log.v(LOG_TAG, "couchStarter is null; nothing to stop.");
+			}
 		} 
 		catch (IllegalArgumentException e) 
 		{
@@ -76,6 +80,11 @@ public class PhonegapCouchbaseAndroid extends DroidGap
   					PasswordAuthentication credential = new PasswordAuthentication("admin", "admin".toCharArray());
   					credential = null; // NO USER/PASSWORD ON ANDROID
   		            //CouchMover couchMover = new CouchMover(serverURL, credential, "mycouchapp_db");
+  					
+  	  			    // Add MobileFuton
+  					CouchMover mFCouchMover = new CouchMover(serverURL, credential, "mobilefuton");
+  					mFCouchMover.loadDocumentFromAssetManager(getAssets(), "_design/mobilefuton", "mobilefuton.json", "mobilefuton.version");
+			        
   					CouchMover couchMover = new CouchMover(serverURL, credential, "odk");
 				    
   			    // load the coachapp if needed from a bundle (you can create non-bundle loading options through loadDocument)
@@ -83,7 +92,8 @@ public class PhonegapCouchbaseAndroid extends DroidGap
   	  			    couchMover.loadDocumentFromAssetManager(getAssets(), "_design/render", "odk.json", "odk.version");
   	  			    couchMover.loadDocumentFromAssetManager(getAssets(), "ArrestDocket", "ad.json", "ad.version");
   	  			    couchMover.loadDocumentFromAssetManager(getAssets(), "PatientRegistration", "pr.json", "pr.version");
-			        
+  	  			    
+
   			    // load the data if needed from a bundle (you can create non-bundle loading options through loadDocument)
   			    //couchMover.loadDocumentFromAssetManager(getAssets(), "mydata", "mydata.json", "mydata.version");
 
