@@ -1,6 +1,6 @@
 ## Kudos to Kevin Malakoff
 
-I’m using the android portion of the code from [phonegap-couchbase-xplatform](https://github.com/kmalakoff/phonegap-couchbase-xplatform). 
+I'm using the android portion of the code from [phonegap-couchbase-xplatform](https://github.com/kmalakoff/phonegap-couchbase-xplatform). 
 Android Couchapps that use views currently do not work in the emulator, but they do work on the device:
  
 https://groups.google.com/d/msg/mobile-couchbase/Lk_1eafr1pI/wSdv1YkSoYIJ
@@ -17,8 +17,8 @@ couchpack document http://localhost:5984/odk/_design/render odk
 couchpack document http://localhost:5984/odk/ArrestDocket ad
 couchpack document http://localhost:5984/odk/PatientRegistration pr
  
-It strips the id’s and revs, and also creates a version id that can be used for version tracking. 
-Kevin Malakoff’s system creates a “shadow” document that has this version, I think, that is used for tracking freshness.
+It strips the id's and revs, and also creates a version id that can be used for version tracking. 
+Kevin Malakoff's system creates a “shadow” document that has this version, I think, that is used for tracking freshness.
  
 I would like a way to slurp the whole db into a single document. 
 I tried couchapp push –export, but it did not quite have all of the magic sauce. 
@@ -37,13 +37,13 @@ https://github.com/vetula/phonegap-couchbase-android/blob/master/src/com/phonega
 
 I added some code from Mobile Futon to set the app port to 5985 to make debugging a little easier. 
 The URL this generates are strange: http://0.0.0.0:5985/odk/... Never seen that before! 
-But it works fine, and I can even access it using the tablet’s browser.
+But it works fine, and I can even access it using the tablet's browser.
 
 Also added Mobile Futon to the app to view the CouchDB and also facilitate viewing the app as a CouchApp in Chrome.
 
 ## Next Steps
 Next step is to code the app to look in assets/loadme directory and loop through the files. 
-Get the document name from the filename. I’d change how I’m handling the filename output by couchpack:
+Get the document name from the filename. I would change how I'm handling the filename output by couchpack:
  
 couchpack document http://localhost:5984/odk/ArrestDocket ArrestDocket
 
